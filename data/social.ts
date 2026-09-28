@@ -7,7 +7,7 @@ function readEnv(name: string) {
 const githubUsername = readEnv("NEXT_PUBLIC_GITHUB_USERNAME") || "sanjuny";
 const linkedinUrl =
   readEnv("NEXT_PUBLIC_LINKEDIN_URL") ||
-  "https://www.linkedin.com/in/sanjay-kumar-2b27b9243";
+  "https://www.linkedin.com/in/sanjay-kumar-se";
 
 export const social = {
   githubUsername: isGithubUsername(githubUsername) ? githubUsername : "",
