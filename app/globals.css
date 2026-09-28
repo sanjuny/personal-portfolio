@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --background: #f4f2ec;
+  --foreground: #1a1916;
+  --muted: #5e5b54;
+  --border: #e2ddd3;
+  --card: #fbfaf6;
+  --accent: #6d4c28;
+  --accent-soft: rgba(109, 76, 40, 0.08);
+  --ring: #6d4c28;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #0e0e0c;
+  --foreground: #f4f1ea;
+  --muted: #a8a49a;
+  --border: rgba(244, 241, 234, 0.12);
+  --card: #161614;
+  --accent: #d8c4a4;
+  --accent-soft: rgba(216, 196, 164, 0.1);
+  --ring: #d8c4a4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  color: var(--foreground);
+}
+
+:where(a, button, input, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes draw-y {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes draw-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .draw-y {
+    transform-origin: top;
+    animation: draw-y 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .draw-x {
+    transform-origin: center;
+    animation: draw-x 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}

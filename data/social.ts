@@ -1,0 +1,19 @@
+import { isGithubUsername, isHttpUrl } from "@/lib/utils";
+
+function readEnv(name: string) {
+  return process.env[name]?.trim() ?? "";
+}
+
+const githubUsername = readEnv("NEXT_PUBLIC_GITHUB_USERNAME");
+const linkedinUrl = readEnv("NEXT_PUBLIC_LINKEDIN_URL");
+
+export const social = {
+  githubUsername: isGithubUsername(githubUsername) ? githubUsername : "",
+  linkedinUrl: isHttpUrl(linkedinUrl) ? linkedinUrl : "",
+  resumePath: "/Sanjay-Kumar-Resume.pdf",
+  resumeFileName: "Sanjay-Kumar-Resume.pdf",
+} as const;
+
+export function githubProfileUrl(username: string) {
+  return `https://github.com/${username}`;
+}
