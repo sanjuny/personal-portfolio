@@ -59,18 +59,6 @@ export const experience: Role[] = [
           "Worked on a B2B travel platform spanning flight, hotel, car and insurance workflows, including frontend modernization, backend services, integrations, production issue resolution and deployments.",
         technologies: ["Next.js", "React", "NestJS", "Java"],
       },
-      {
-        name: "Aadesh Cabs",
-        summary:
-          "Worked on backend and admin functionality for a ride-sharing platform, including APIs, fare calculation, wallet, referral/promocode functionality, real-time notifications, payments, location tracking and user management.",
-        technologies: ["Java", "NestJS", "React"],
-      },
-      {
-        name: "Catapulto",
-        summary:
-          "Refactored legacy React class components to functional components and worked on courier tracking with Yandex Maps, along with SEO improvements.",
-        technologies: ["React", "Yandex Maps"],
-      },
     ],
   },
   {
