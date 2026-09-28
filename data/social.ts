@@ -4,7 +4,7 @@ function readEnv(name: string) {
   return process.env[name]?.trim() ?? "";
 }
 
-const githubUsername = readEnv("NEXT_PUBLIC_GITHUB_USERNAME");
+const githubUsername = readEnv("NEXT_PUBLIC_GITHUB_USERNAME") || "sanjuny";
 const linkedinUrl = readEnv("NEXT_PUBLIC_LINKEDIN_URL");
 
 export const social = {
