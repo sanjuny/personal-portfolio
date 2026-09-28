@@ -26,13 +26,14 @@ export const experience: Role[] = [
     end: "Present",
     startDate: "2023-03",
     summary:
-      "Build and maintain production SaaS and B2B travel applications across frontend, backend, integrations, deployment and production support.",
+      "Build and maintain production SaaS and B2B travel applications across frontend, backend, integrations, deployment and production support. Work closely with clients on live issues: take calls, ship a fix in a short time, and update them directly, including on WhatsApp, so production is not left waiting.",
     capabilities: [
       "SaaS Development",
       "B2B Platforms",
       "API Development",
       "Third-Party Integrations",
       "Production Debugging",
+      "Client Communication",
       "Legacy Modernization",
       "Deployment",
       "Real-Time Applications",
